@@ -1,6 +1,6 @@
 
 <p>
-  @diegolijo/cordova-plugin-local-notification is a fork of the @spoonconsulting/cordova-plugin-local-notification, adapted for cordova-android 12.0.0
+  @parrino/cordova-plugin-local-notifications is a fork of the @spoonconsulting/cordova-plugin-local-notification, adapted for cordova-android 12.0.0
 </p>
 
 <p align="center">
@@ -8,8 +8,8 @@
 </p>
 
 <p align="center">
-    <a href="https://www.npmjs.com/package/@diegolijo/cordova-plugin-local-notification">
-        <img src="https://badge.fury.io/js/@diegolijo%2Fcordova-plugin-local-notification.svg" alt="npm version" />
+    <a href="https://www.npmjs.com/package/@parrino/cordova-plugin-local-notifications">
+        <img src="https://badge.fury.io/js/@parrino%2Fcordova-plugin-local-notifications.svg" alt="npm version" />
     </a>
     <a href="https://opensource.org/licenses/Apache-2.0">
         <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License" />
@@ -491,11 +491,11 @@ The plugin can be installed via [Cordova-CLI][CLI] and is publicly available on 
 
 Execute from the projects root folder:
 
-    $ cordova plugin add @diegolijo/cordova-plugin-local-notification
+    $ cordova plugin add @parrino/cordova-plugin-local-notifications
 
 Or install a specific version:
 
-    $ cordova plugin add @diegolijo/cordova-plugin-local-notification@VERSION
+    $ cordova plugin add @parrino/cordova-plugin-local-notifications@VERSION
 
 Or install the latest head version:
 
@@ -524,9 +524,9 @@ Made with :yum: from Leipzig
 © 2013 [appPlant GmbH][appplant]
 
 
-[ticket_template]: https://github.com/katzer/cordova-plugin-local-notifications/issues/1188
+[ticket_template]: https://github.com/diegolijo/cordova-plugin-local-notifications/issues/1188
 [cordova]: https://cordova.apache.org
 [CLI]: http://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-line%20Interface
-[npm]: https://www.npmjs.com/package/cordova-plugin-local-notification
+[npm]: https://www.npmjs.com/package/@parrino/cordova-plugin-local-notifications
 [apache2_license]: http://opensource.org/licenses/Apache-2.0
 [appplant]: http://appplant.de

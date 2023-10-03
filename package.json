@@ -1,9 +1,9 @@
 {
-  "name": "@diegolijo/cordova-plugin-local-notification",
-  "version": "1.0.0",
+  "name": "@parrino/cordova-plugin-local-notifications",
+  "version": "1.0.1",
   "description": "Schedules and queries for local notifications",
   "cordova": {
-    "id": "cordova-plugin-local-notification",
+    "id": "cordova-plugin-local-notifications",
     "platforms": [
       "android",
       "ios",
