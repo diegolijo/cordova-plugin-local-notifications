@@ -1,10 +1,15 @@
+
+<p>
+  @diegolijo/cordova-plugin-local-notification is a fork of the @spoonconsulting/cordova-plugin-local-notification, adapted for cordova-android 12.0.0
+</p>
+
 <p align="center">
     <img src="images/logo.png">
 </p>
 
 <p align="center">
-    <a href="https://www.npmjs.com/package/@spoonconsulting/cordova-plugin-local-notification">
-        <img src="https://badge.fury.io/js/@spoonconsulting%2Fcordova-plugin-local-notification.svg" alt="npm version" />
+    <a href="https://www.npmjs.com/package/@diegolijo/cordova-plugin-local-notification">
+        <img src="https://badge.fury.io/js/@diegolijo%2Fcordova-plugin-local-notification.svg" alt="npm version" />
     </a>
     <a href="https://opensource.org/licenses/Apache-2.0">
         <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License" />
@@ -87,12 +92,12 @@ cordova.plugins.notification.local.schedule([
 
 A notification does have a set of configurable properties. Not all of them are supported across all platforms.
 
-| Property      | Property      | Property      | Property      | Property      | Property      | Property      | Property      |
-| :------------ | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ |
-| id            | data          | actionGroupId | summary       | led           | showWhen      | channel       | actions       |
-| text          | icon          | attachments   | smallIcon     | color         | defaults      | launch        | groupSummary  |
-| title         | silent        | progressBar   | sticky        | vibrate       | priority      | mediaSession  | foreground    |
-| sound         | trigger       | group         | autoClear     | lockscreen    | number        | badge         | wakeup        |
+| Property | Property | Property      | Property  | Property   | Property | Property     | Property     |
+| :------- | :------- | :------------ | :-------- | :--------- | :------- | :----------- | :----------- |
+| id       | data     | actionGroupId | summary   | led        | showWhen | channel      | actions      |
+| text     | icon     | attachments   | smallIcon | color      | defaults | launch       | groupSummary |
+| title    | silent   | progressBar   | sticky    | vibrate    | priority | mediaSession | foreground   |
+| sound    | trigger  | group         | autoClear | lockscreen | number   | badge        | wakeup       |
 
 For their default values see:
 
@@ -176,19 +181,19 @@ cordova.plugins.notification.local.schedule({
 
 Actions do have a set of configurable properties. Not all of them are supported across all platforms.
 
-| Property     | Type         | Android | iOS | Windows |
-| :----------- | :----------- | :------ | :-- | :------ |
-| id           | button+input | x       | x   | x       |
-| title        | button+input | x       | x   | x       |
-| launch       | button+input | x       | x   | x       |
-| ui           | button+input |         | x   |         |
-| needsAuth    | button+input |         | x   |         |
-| icon         | button+input | x       |     |         |
-| emptyText    | input        | x       | x   | x       |
-| submitTitle  | input        |         | x   |         |
-| editable     | input        | x       |     |         |
-| choices      | input        | x       |     |         |
-| defaultValue | input        |         |     | x       |
+| Property     | Type         | Android | iOS  | Windows |
+| :----------- | :----------- | :------ | :--- | :------ |
+| id           | button+input | x       | x    | x       |
+| title        | button+input | x       | x    | x       |
+| launch       | button+input | x       | x    | x       |
+| ui           | button+input |         | x    |         |
+| needsAuth    | button+input |         | x    |         |
+| icon         | button+input | x       |      |         |
+| emptyText    | input        | x       | x    | x       |
+| submitTitle  | input        |         | x    |         |
+| editable     | input        | x       |      |         |
+| choices      | input        | x       |      |         |
+| defaultValue | input        |         |      | x       |
 
 
 ## Triggers
@@ -254,51 +259,51 @@ cordova.plugins.notification.local.schedule({
 
 The properties depend on the trigger type. Not all of them are supported across all platforms.
 
-| Type         | Property      | Type    | Value            | Android | iOS | Windows |
-| :----------- | :------------ | :------ | :--------------- | :------ | :-- | :------ |
-| Fix          | 
-|              | at            | Date    |                  | x       | x   | x       |
-| Timespan     |
-|              | in            | Int     |                  | x       | x   | x       |
-|              | unit          | String  | `second`         | x       | x   | x       |
-|              | unit          | String  | `minute`         | x       | x   | x       |
-|              | unit          | String  | `hour`           | x       | x   | x       |
-|              | unit          | String  | `day`            | x       | x   | x       |
-|              | unit          | String  | `week`           | x       | x   | x       |
-|              | unit          | String  | `month`          | x       | x   | x       |
-|              | unit          | String  | `quarter`        | x       | x   | x       |
-|              | unit          | String  | `year`           | x       | x   | x       |
-| Repeat       |
-|              | count         | Int     |                  | x       |     | x       |
-|              | every         | String  | `minute`         | x       | x   | x       |
-|              | every         | String  | `hour`           | x       | x   | x       |
-|              | every         | String  | `day`            | x       | x   | x       |
-|              | every         | String  | `week`           | x       | x   | x       |
-|              | every         | String  | `month`          | x       | x   | x       |
-|              | every         | String  | `quarter`        | x       |     | x       |
-|              | every         | String  | `year`           | x       | x   | x       |
-|              | before        | Date    |                  | x       |     | x       |
-|              | firstAt       | Date    |                  | x       | x   | x       |
-| Match        |
-|              | count         | Int     |                  | x       |     | x       |
-|              | every         | Object  | `minute`         | x       | x   | x       |
-|              | every         | Object  | `hour`           | x       | x   | x       |
-|              | every         | Object  | `day`            | x       | x   | x       |
-|              | every         | Object  | `weekday`        | x       | x   | x       |
-|              | every         | Object  | `weekdayOrdinal` |         | x   |
-|              | every         | Object  | `week`           |         | x   |
-|              | every         | Object  | `weekOfMonth`    | x       | x   | x       |
-|              | every         | Object  | `month`          | x       | x   | x       |
-|              | every         | Object  | `quarter`        |         | x   |
-|              | every         | Object  | `year`           | x       | x   | x       |
-|              | before        | Date    |                  | x       |     | x       |
-|              | after         | Date    |                  | x       | x   | x       |
-| Location     |
-|              | center        | Array   | `[lat, long]`    |         | x   |
-|              | radius        | Int     |                  |         | x   |
-|              | notifyOnEntry | Boolean |                  |         | x   |
-|              | notifyOnExit  | Boolean |                  |         | x   |
-|              | single        | Boolean |                  |         | x   |
+| Type     | Property      | Type    | Value            | Android | iOS  | Windows |
+| :------- | :------------ | :------ | :--------------- | :------ | :--- | :------ |
+| Fix      |
+|          | at            | Date    |                  | x       | x    | x       |
+| Timespan |
+|          | in            | Int     |                  | x       | x    | x       |
+|          | unit          | String  | `second`         | x       | x    | x       |
+|          | unit          | String  | `minute`         | x       | x    | x       |
+|          | unit          | String  | `hour`           | x       | x    | x       |
+|          | unit          | String  | `day`            | x       | x    | x       |
+|          | unit          | String  | `week`           | x       | x    | x       |
+|          | unit          | String  | `month`          | x       | x    | x       |
+|          | unit          | String  | `quarter`        | x       | x    | x       |
+|          | unit          | String  | `year`           | x       | x    | x       |
+| Repeat   |
+|          | count         | Int     |                  | x       |      | x       |
+|          | every         | String  | `minute`         | x       | x    | x       |
+|          | every         | String  | `hour`           | x       | x    | x       |
+|          | every         | String  | `day`            | x       | x    | x       |
+|          | every         | String  | `week`           | x       | x    | x       |
+|          | every         | String  | `month`          | x       | x    | x       |
+|          | every         | String  | `quarter`        | x       |      | x       |
+|          | every         | String  | `year`           | x       | x    | x       |
+|          | before        | Date    |                  | x       |      | x       |
+|          | firstAt       | Date    |                  | x       | x    | x       |
+| Match    |
+|          | count         | Int     |                  | x       |      | x       |
+|          | every         | Object  | `minute`         | x       | x    | x       |
+|          | every         | Object  | `hour`           | x       | x    | x       |
+|          | every         | Object  | `day`            | x       | x    | x       |
+|          | every         | Object  | `weekday`        | x       | x    | x       |
+|          | every         | Object  | `weekdayOrdinal` |         | x    |
+|          | every         | Object  | `week`           |         | x    |
+|          | every         | Object  | `weekOfMonth`    | x       | x    | x       |
+|          | every         | Object  | `month`          | x       | x    | x       |
+|          | every         | Object  | `quarter`        |         | x    |
+|          | every         | Object  | `year`           | x       | x    | x       |
+|          | before        | Date    |                  | x       |      | x       |
+|          | after         | Date    |                  | x       | x    | x       |
+| Location |
+|          | center        | Array   | `[lat, long]`    |         | x    |
+|          | radius        | Int     |                  |         | x    |
+|          | notifyOnEntry | Boolean |                  |         | x    |
+|          | notifyOnExit  | Boolean |                  |         | x    |
+|          | single        | Boolean |                  |         | x    |
 
 
 ## Progress
@@ -486,15 +491,15 @@ The plugin can be installed via [Cordova-CLI][CLI] and is publicly available on 
 
 Execute from the projects root folder:
 
-    $ cordova plugin add @spoonconsulting/cordova-plugin-local-notification
+    $ cordova plugin add @diegolijo/cordova-plugin-local-notification
 
 Or install a specific version:
 
-    $ cordova plugin add @spoonconsulting/cordova-plugin-local-notification@VERSION
+    $ cordova plugin add @diegolijo/cordova-plugin-local-notification@VERSION
 
 Or install the latest head version:
 
-    $ cordova plugin add https://github.com/spoonconsulting/cordova-plugin-local-notifications.git
+    $ cordova plugin add https://github.com/diegolijo/cordova-plugin-local-notifications.git
 
 Or install from local source:
 

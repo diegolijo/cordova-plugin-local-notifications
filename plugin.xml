@@ -23,7 +23,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="@spoonconsulting/cordova-plugin-local-notification"
+        id="@diegolijo/cordova-plugin-local-notification"
         version="1.0.5">
 
     <name>LocalNotification</name>
@@ -36,7 +36,7 @@
 
     <license>Apache 2.0</license>
 
-    <author>Sebastián Katzer and Spoon Consulting</author>
+    <author>Sebastián Katzer  and Spoon Consulting and Diego Santiago</author>
 
     <!-- cordova -->
     <engines>
@@ -50,7 +50,7 @@
 
     <!-- dependencies -->
     <dependency id="cordova-plugin-device" />
-    <dependency id="cordova-plugin-badge" version=">=0.8.5" />
+    <dependency id="cordova-plugin-badge" version=">=0.8.9" />
 
     <!-- js -->
     <js-module src="www/local-notification.js" name="LocalNotification">
@@ -105,6 +105,10 @@
                 <param name="android-package" value="de.appplant.cordova.plugin.localnotification.LocalNotification"/>
             </feature>
         </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+		</config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <provider
